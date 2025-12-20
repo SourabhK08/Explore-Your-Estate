@@ -1,9 +1,16 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import ServicesBento from "@/components/Home/ServicesBento";
+import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-[#0a4c84] hover:text-[#e6e6e6]">EYE - Explore Your Estate</h1>
-    </div>
+    <main className="bg-[#050505] selection:bg-[#0a4c84] selection:text-white">
+      <Navbar />
+      <Hero />
+
+      <ServicesBento />
+      <WhyChooseUs />
+    </main>
   );
 }
