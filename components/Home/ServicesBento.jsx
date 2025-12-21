@@ -48,11 +48,11 @@ export default function ServicesBento() {
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="text-[#10a1fd] font-mono tracking-[0.3em] uppercase text-sm block mb-4"
+          className="text-[#10a1fd] font-mono tracking-[0.3em] uppercase text-xl block mb-4"
         >
           Our Services
         </motion.span>
-        <h2 className="text-5xl md:text-7xl font-bold text-[#e6e6e6] tracking-tight">
+        <h2 className="text-5xl md:text-6xl font-bold text-[#e6e6e6] tracking-tight">
           We Shape <span className="text-outline italic">Perception.</span>
         </h2>
       </div>
