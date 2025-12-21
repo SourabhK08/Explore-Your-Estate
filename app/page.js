@@ -5,7 +5,7 @@ import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <main className="bg-[#050505] selection:bg-[#0a4c84] selection:text-white">
+    <main className="bg-[#050505] selection:bg-[#10a1fd] selection:text-white">
       <Navbar />
       <Hero />
 

@@ -19,23 +19,23 @@ const Navbar = () => {
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
                 transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-                className="absolute inset-0 bg-linear-to-r from-transparent via-[#0a4c84]/40 to-transparent italic h-[90%] "
+                className="absolute inset-0 bg-linear-to-r from-transparent via-[#10a1fd]/40 to-transparent italic h-[90%] "
               />
             </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#e6e6e6]/80">
-            <a href="#" className="hover:text-[#0a4c84] transition-colors">
+            <a href="#" className="hover:text-[#10a1fd] transition-colors">
               Our Vision
             </a>
-            <a href="#" className="hover:text-[#0a4c84] transition-colors">
+            <a href="#" className="hover:text-[#10a1fd] transition-colors">
               Services
             </a>
-            <a href="#" className="hover:text-[#0a4c84] transition-colors">
+            <a href="#" className="hover:text-[#10a1fd] transition-colors">
               Projects
             </a>
-            <button className="bg-[#0a4c84] text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(10,76,132,0.4)]">
+            <button className="bg-[#10a1fd] text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(10,76,132,0.4)]">
               Let's Talk
             </button>
           </div>

@@ -26,7 +26,7 @@ export const BackgroundEffects = () => {
           left: springX,
           top: springY,
         }}
-        className="absolute w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-[#0a4c84]/15 rounded-full blur-[120px] z-0"
+        className="absolute w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-[#10a1fd]/15 rounded-full blur-[120px] z-0"
       />
 
       {/* 2. Floating Aura Orbs */}
@@ -36,7 +36,7 @@ export const BackgroundEffects = () => {
           opacity: [0.1, 0.2, 0.1],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#0a4c84]/10 rounded-full blur-[100px]"
+        className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#10a1fd]/10 rounded-full blur-[100px]"
       />
 
       {/* 3. Animated Cyber-Grid */}

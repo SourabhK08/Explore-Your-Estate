@@ -17,13 +17,13 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest uppercase border border-[#0a4c84]/50 rounded-full text-[#0a4c84] bg-[#0a4c84]/5">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest uppercase border border-[#10a1fd]/50 rounded-full text-[#10a1fd] bg-[#10a1fd]/5">
             Real Estate Marketing Redefined
           </span>
           
           <h1 className="text-5xl md:text-8xl font-bold text-[#e6e6e6] mb-6 leading-tight">
             Explore Your Estate <br /> 
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0a4c84] to-blue-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#10a1fd] to-blue-400">
                Differently
             </span>
           </h1>
@@ -56,7 +56,7 @@ const Hero = () => {
             { label: "Tech", val: "AI Driven" }
           ].map((stat, i) => (
             <div key={i} className="text-center">
-              <h3 className="text-[#0a4c84] text-2xl font-bold">{stat.val}</h3>
+              <h3 className="text-[#10a1fd] text-2xl font-bold">{stat.val}</h3>
               <p className="text-gray-500 text-sm uppercase tracking-widest">{stat.label}</p>
             </div>
           ))}
