@@ -1,6 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import { CheckCircle2, TrendingUp, Users, Sparkles, ArrowRight, ArrowDown } from "lucide-react";
+import {
+  CheckCircle2,
+  TrendingUp,
+  Users,
+  Sparkles,
+  ArrowRight,
+  ArrowDown,
+} from "lucide-react";
 import { BackgroundEffects } from "../BackgroundEffects";
 
 export default function WhyChooseUs() {
@@ -96,7 +103,9 @@ export default function WhyChooseUs() {
               {/* Supporting Metrics */}
               <div className="grid grid-cols-2 gap-6 pt-2">
                 <div>
-                  <p className="text-2xl font-bold text-white flex items-center gap-2"><ArrowDown/> 35%</p>
+                  <p className="text-2xl font-bold text-white flex items-center gap-2">
+                    <ArrowDown /> 35%
+                  </p>
                   <p className="text-xs uppercase tracking-widest text-white/40">
                     Cost per Lead
                   </p>
@@ -116,12 +125,8 @@ export default function WhyChooseUs() {
               </p>
 
               {/* CTA */}
-              <button
-                className="w-full py-4 rounded-2xl font-semibold bg-white text-black 
-      hover:bg-[#10a1fd] hover:text-white transition-all duration-300
-      tracking-wide flex items-center justify-center gap-2 mt-4 cursor-pointer"
-              >
-                Read Case Stories <ArrowRight/>
+              <button className="w-full py-4 rounded-2xl font-semibold bg-white text-black hover:bg-[#10a1fd] hover:text-white transition-all duration-300 tracking-wide flex items-center justify-center gap-2 mt-4 cursor-pointer">
+                Read Case Stories <ArrowRight />
               </button>
             </div>
           </motion.div>
