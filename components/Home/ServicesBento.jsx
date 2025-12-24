@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Eye, Layers, Target, BarChart3 } from "lucide-react";
+import Image from "next/image";
 
 export default function ServicesBento() {
   const services = [
@@ -8,37 +8,50 @@ export default function ServicesBento() {
       id: "01",
       title: "Brand Building",
       desc: "Strategic branding, identity design, and concept design that position your real estate projects above the rest.",
-      icon: <Eye className="text-[#10a1fd]" size={32} />,
+      icon: (
+        <Image src="/icons/5.png" alt="Brand Building" width={80} height={80} />
+      ),
     },
     {
       id: "02",
       title: "Project Advisory",
       desc: "Consultation, strategy, and implementation to shape projects with maximum impact.",
-      icon: <Layers className="text-[#10a1fd]" size={32} />,
+      icon: (
+        <Image src="/icons/3.png" alt="Brand Building" width={80} height={80} />
+      ),
     },
     {
       id: "03",
       title: "Content Creation",
       desc: "Creative visuals, storytelling, and campaigns tailored to attract and engage the right audience",
-      icon: <Target className="text-[#10a1fd]" size={32} />,
+      icon: <Image src="/icons/6.png" alt="Content" width={80} height={80} />,
     },
     {
       id: "04",
       title: "3D Visual Storytelling",
       desc: "Explain how EYE’s visuals help clients imagine, connect and decide faster",
-      icon: <BarChart3 className="text-[#10a1fd]" size={32} />,
+      icon: <Image src="/icons/2.png" alt="3d" width={80} height={80} />,
     },
     {
       id: "05",
       title: "Powering Sales",
       desc: "Smart marketing strategies designed to deliver quality leads and drive real conversions.",
-      icon: <BarChart3 className="text-[#10a1fd]" size={32} />,
+      icon: (
+        <Image src="/icons/1.png" alt="Powering sales" width={80} height={80} />
+      ),
     },
     {
       id: "06",
       title: "Marketing Motion",
       desc: "Digital growth, targeted campaigns, and strong partnerships to maximize visibility.",
-      icon: <BarChart3 className="text-[#10a1fd]" size={32} />,
+      icon: (
+        <Image
+          src="/icons/4.png"
+          alt="Marketing motion"
+          width={80}
+          height={80}
+        />
+      ),
     },
   ];
 

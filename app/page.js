@@ -6,7 +6,9 @@ import HowWeWork from "@/components/Home/HowWeWork";
 import CaseStories from "@/components/Home/CaseStories";
 import CaseStories2 from "@/components/Home/CaseStories2";
 import Clients from "@/components/Home/Clients";
-
+import Testimonial from "@/components/Home/Testimonial";
+import Faq from "@/components/Home/Faq";
+import FinalCTA from "@/components/Home/FinalCTA";
 
 export default function Home() {
   return (
@@ -19,8 +21,10 @@ export default function Home() {
       <HowWeWork />
       {/* <CaseStories/>
       <CaseStories2/> */}
-      <Clients/>
-     
+      <Clients />
+      <Testimonial />
+      <Faq />
+      <FinalCTA />
     </main>
   );
 }
