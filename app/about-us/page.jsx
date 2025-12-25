@@ -76,24 +76,28 @@ function page() {
           </motion.div>
 
           {/* RIGHT — VISUAL */}
+          {/* RIGHT — VISUAL */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative rounded-3xl overflow-hidden border border-white/10 bg-black/30 h-[420px]"
+            className="relative rounded-3xl overflow-hidden"
           >
-            {/* Replace with Image later */}
-            <div className="absolute inset-0 flex items-center justify-center text-white/30 text-sm font-mono">
-              Vision & Mission Visual Placeholder
-            </div>
+            {/* Replace with Image */}
+            <Image
+              src="/about/2.jpeg"
+              alt="Our vision & mission"
+              layout="responsive"
+              width={1200}
+              height={800}
+              className="object-cover"
+            />
           </motion.div>
         </div>
       </section>
 
-
-
-      <AboutCTA/>
+      <AboutCTA />
     </>
   );
 }

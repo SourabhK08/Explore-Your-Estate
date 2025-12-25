@@ -44,19 +44,32 @@ export default function AboutHero() {
 
           {/* IMAGE */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="relative rounded-3xl overflow-hidden border border-white/10"
-          >
-            <Image
-              src="/about/about-hero.jpg"
-              alt="High-end real estate project visualized through cinematic 3D storytelling"
-              width={700}
-              height={500}
-              className="object-cover"
-            />
-          </motion.div>
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6 }}
+  className="
+    w-full 
+    max-w-xl 
+    mx-auto 
+    rounded-3xl 
+    overflow-hidden 
+    border border-white/10
+  "
+>
+  <Image
+    src="/about/1.jpeg"
+    alt="High-end real estate project visualized through cinematic 3D storytelling"
+    width={800}
+    height={500}
+    className="
+      w-full 
+      h-auto 
+      object-cover
+    "
+    sizes="(max-width: 768px) 100vw, 600px"
+  />
+</motion.div>
+
         </div>
       </section>
   );
