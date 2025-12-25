@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { name: "Our Vision", href: "/vision" },
+    { name: "About EYE", href: "/about-us" },
     { name: "Services", href: "/services" },
-    { name: "Projects", href: "/projects" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Contact", href: "/contact-us" },
   ];
 
@@ -54,7 +54,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-[#e6e6e6] transition-colors duration-300 text-md font-light"
+                    className="text-white hover:text-[#10a1fd] transition-all duration-300 text-md font-light"
                   >
                     {link.name}
                   </Link>
@@ -70,7 +70,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               {capabilities.map((item) => (
-                <li key={item} className="text-white text-md font-light">
+                <li
+                  key={item}
+                  className="text-white text-md font-light hover:text-[#10a1fd] transition-all duration-300 cursor-pointer "
+                >
                   {item}
                 </li>
               ))}
@@ -82,9 +85,9 @@ export default function Footer() {
             <h4 className="text-[#10a1fd] font-mono  tracking-[0.3em] uppercase mb-8">
               Connect
             </h4>
-            <div className="space-y-6">
-              <div className="space-y-1">
-                <p className="text-sm text-white uppercase tracking-widest">
+            <div className="space-y-5">
+              <div className="space-y-1 flex flex-col">
+                <p className="text-sm text-white/50 uppercase tracking-widest">
                   Inquiries
                 </p>
                 <a
@@ -93,14 +96,20 @@ export default function Footer() {
                 >
                   exploreyourestate@gmail.com
                 </a>
+                <a
+                  href="tel:+919828700234"
+                  className="text-md hover:text-[#10a1fd] transition-colors font-medium tracking-tight mt-1"
+                >
+                  +91 98287 00234
+                </a>
               </div>
               <div className="space-y-1">
-                <p className="text-sm text-white uppercase tracking-widest">
-                  Reach
+                <p className="text-sm text-white/50 uppercase tracking-widest">
+                  Address
                 </p>
-                <p className="text-md font-light">
-                  Pan-India Strategic Presence
-                </p>
+                <a href="https://maps.app.goo.gl/CZaFApD87g2SizJT8" target="_blank" className="text-md font-light hover:text-[#10a1fd] transition-colors">
+                  Chitrakoot, 133, Mahadev Nagar, Vaishali Nagar, Jaipur, Rajasthan 302021
+                </a>
               </div>
               <div className="flex gap-5 pt-4">
                 {[

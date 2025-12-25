@@ -60,6 +60,8 @@ const Typewriter = ({ text }) => {
   return <span>{displayedText}</span>;
 };
 
+
+
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -80,12 +82,12 @@ export default function Faq() {
               Questions Serious <br /> Developers Ask
             </h2>
 
-            <div className="space-y-4">
+            <div className="hidden lg:block space-y-4">
               {faqs.map((faq, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-full flex items-center gap-6 py-6 border-b border-white/5 transition-all text-left group ${
+                  className={` w-full flex items-center gap-6 py-6 border-b border-white/5 transition-all text-left group ${
                     activeIndex === index
                       ? "border-[#10a1fd]"
                       : "hover:border-white/20"
@@ -101,7 +103,7 @@ export default function Faq() {
                   <span
                     className={`text-lg font-medium transition-colors ${
                       activeIndex === index
-                        ? "text-[#e6e6e6]"
+                        ? "text-[#10a1fd]"
                         : "text-[#e6e6e6]/40 group-hover:text-[#e6e6e6]/60"
                     }`}
                   >
@@ -110,14 +112,53 @@ export default function Faq() {
                 </button>
               ))}
             </div>
+
+            {/* MOBILE FAQ (ACCORDION) */}
+            <div className="lg:hidden space-y-4">
+              {faqs.map((faq, index) => {
+                const isActive = activeIndex === index;
+
+                return (
+                  <div key={faq.id} className="border-b border-white/5 pb-4">
+                    <button
+                      onClick={() => setActiveIndex(isActive ? -1 : index)}
+                      className="w-full flex items-center gap-4 text-left"
+                    >
+                      <span className="font-mono text-sm text-[#10a1fd]">
+                        {faq.id}
+                      </span>
+                      <span className="text-base text-[#e6e6e6] font-medium">
+                        {faq.question}
+                      </span>
+                    </button>
+
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.35, ease: "easeOut" }}
+                          className="overflow-hidden"
+                        >
+                          <p className="mt-4 text-[#e6e6e6]/70 text-sm leading-relaxed pl-8">
+                            {faq.answer}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* RIGHT SIDE: ANSWER PANEL WITH TYPE-ON EFFECT */}
-          <div className="lg:w-7/12 flex items-center z-10">
+          <div className="hidden lg:flex lg:w-7/12 items-center z-10">
             <div className="w-full min-h-[400px] relative p-12 lg:p-20 rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl flex flex-col justify-center shadow-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={activeIndex}
+                  key={faqs[activeIndex]?.id || "empty"}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -127,17 +168,22 @@ export default function Faq() {
                   <div className="flex items-center gap-2 mb-8">
                     <span className="w-2 h-2 rounded-full bg-[#10a1fd] animate-pulse" />
                     <span className="text-[#10a1fd] font-mono text-[10px] tracking-widest uppercase opacity-70">
-                      STRATEGIC RESPONSE
+                      EYE’s Perspective
                     </span>
                   </div>
 
                   <p className="text-2xl md:text-3xl text-[#e6e6e6] leading-relaxed font-light min-h-[150px]">
-                    <Typewriter text={faqs[activeIndex].answer} />
-                    <motion.span
-                      animate={{ opacity: [1, 0] }}
-                      transition={{ duration: 0.8, repeat: Infinity }}
-                      className="inline-block w-1 h-7 bg-[#10a1fd] ml-2 align-middle"
-                    />
+                    {faqs[activeIndex] && (
+                      <Typewriter text={faqs[activeIndex].answer} />
+                    )}
+
+                    {faqs[activeIndex] && (
+                      <motion.span
+                        animate={{ opacity: [1, 0] }}
+                        transition={{ duration: 0.8, repeat: Infinity }}
+                        className="inline-block w-1 h-7 bg-[#10a1fd] ml-2 align-middle"
+                      />
+                    )}
                   </p>
                 </motion.div>
               </AnimatePresence>

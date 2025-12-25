@@ -125,9 +125,9 @@ export default function WhyChooseUs() {
               </p>
 
               {/* CTA */}
-              <button className="w-full py-4 rounded-2xl font-semibold bg-white text-black hover:bg-[#10a1fd] hover:text-white transition-all duration-300 tracking-wide flex items-center justify-center gap-2 mt-4 cursor-pointer">
-                Read Case Stories <ArrowRight />
-              </button>
+              <a href="/approach" className="w-full py-4 rounded-2xl font-semibold bg-white text-black hover:bg-[#10a1fd] hover:text-white transition-all duration-300 tracking-wide flex items-center justify-center gap-2 mt-4 cursor-pointer">
+                See How We Work <ArrowRight />
+              </a>
             </div>
           </motion.div>
         </div>

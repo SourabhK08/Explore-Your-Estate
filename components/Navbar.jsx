@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, MoveUpRight, X } from "lucide-react";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -26,18 +26,24 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#e6e6e6]/80">
-            <a href="#" className="hover:text-[#10a1fd] transition-colors">
-              Our Vision
+            <a href="/" className="hover:text-[#10a1fd] transition-colors">
+             Home
             </a>
-            <a href="#" className="hover:text-[#10a1fd] transition-colors">
+            <a href="/about-us" className="hover:text-[#10a1fd] transition-colors">
+              About EYE
+            </a>
+            <a href="/services" className="hover:text-[#10a1fd] transition-colors">
               Services
             </a>
-            <a href="#" className="hover:text-[#10a1fd] transition-colors">
-              Projects
+            <a href="/case-studies" className="hover:text-[#10a1fd] transition-colors">
+              Case Studies
             </a>
-            <button className="bg-[#10a1fd] text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(10,76,132,0.4)]">
-              Let's Talk
-            </button>
+            {/* <a href="/case-studies" className="hover:text-[#10a1fd] transition-colors">
+              Contact EYE
+            </a> */}
+            <a href="/contact-us" className="bg-[#10a1fd] text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all shadow-[0_0_15px_rgba(10,76,132,0.4)] flex items-center gap-2">
+              Let's Talk <MoveUpRight size={20} />
+            </a>
           </div>
 
           {/* Mobile Toggle */}
